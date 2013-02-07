@@ -490,7 +490,8 @@ Options.extract = function(document) {
         }
       }
       if (options.liveCSS) {
-        if (path.match(/\.css$/i)) {
+        
+        if (path.match(/\.css$/i) || path.match(/\.less$/i) ) {
           if (this.reloadStylesheet(path)) {
             return;
           }
